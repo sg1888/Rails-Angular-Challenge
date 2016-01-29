@@ -6,5 +6,5 @@
 2. "Do not use default Rails routes or controllers."
 => We cannot completely avoid using `Rails routes or controllers`. We need them to process JSON request and incase user refreshes the page which had been handled by Angular.
 
-2. "Verify that in the Successful charges list there are 10 line items. Verify that in the failed charges list there are 5 failed charges. Verify that in the disputed charges list there are failed charges."
+3. "Verify that in the Successful charges list there are 10 line items. Verify that in the failed charges list there are 5 failed charges. Verify that in the disputed charges list there are failed charges."
 => The 2 first sentences are clear for me but the last one isn't: a disputed charge can be a failed charge? Therefore, I don't write a test expectation for testing the last sentence.
