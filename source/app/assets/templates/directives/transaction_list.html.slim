@@ -1,0 +1,17 @@
+h1
+  | {{title}}
+
+table class='table' ng-class="type + '-table'"
+  thead
+    tr
+      th Customer Name
+      th Charge Amount
+      th Charge Date
+  tbody    
+    tr ng-repeat="transaction in transactions"
+      td
+        | {{ transaction.customer.full_name }}
+      td
+        | {{ transaction.amount/100.0 | currency : '$' : 2}}
+      td
+        | {{ transaction.created | timestampToDate }}
