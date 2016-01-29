@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Source</title>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body ng-app='railsAngularTestApp'>
+    <div class='container' ng-controller='ApplicationCtrl' >
+      <% if customer_signed_in? %>
+        <%= link_to "Sign Out", destroy_customer_session_path, method: :delete, class: "pull-right" %>
+      <% end %>
+      <%= yield %>
+    </div>
+  </body>
+</html>

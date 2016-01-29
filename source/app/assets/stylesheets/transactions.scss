@@ -1,0 +1,13 @@
+#transaction-module{
+  .failed-charged-table {
+    tr {
+      background: $failed-charged-row-bg-color;
+    }
+  }
+
+  .disputed-charged-table {
+    tr {
+      background: $disputed-charged-row-bg-color;
+    }
+  }
+}
